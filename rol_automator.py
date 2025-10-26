@@ -76,7 +76,7 @@ for linea in texto_whatsapp.strip().split('\n'):
             print(f"⚠️ Alerta: No se pudo identificar Conductor/Territorio: {linea}. Revisando Fallback...")
             
             parts = re.split(r'\sTerritorio\s', cuerpo)
-            
+
             if len(parts) > 1:
                 terr_cond_part = parts[-1].strip().strip('.')
                 
@@ -130,7 +130,7 @@ df_final = df[columnas_finales]
 
 
 PLANTILLA_FILE = "./template/template.xlsx" 
-OUTPUT_FILE = f"ROL_FINAL_{datetime.now().strftime('%d-%m-%Y')}.xlsx"
+OUTPUT_FILE = f"./output/ROL_FINAL_{datetime.now().strftime('%d-%m-%Y')}.xlsx"
 HOJA_DATOS = 'Datos_Crudos'
 
 try:
